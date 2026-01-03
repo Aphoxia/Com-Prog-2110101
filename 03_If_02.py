@@ -1,25 +1,30 @@
-thrity_first = [1,3,5,7,8,10,12]
-thirty = [4,6,9,11]
+first_nomanine = input().split()
+second_nomanine = input().split()
 
+Grade = ["F","D","C","B","A"]
 
-d,m,y = [int(e) for e in input().split()]
-y -= 543
-n = 31
-if m in thirty:
-    n = 30
+if first_nomanine[2] == "A" and second_nomanine[2] == "A":
+    if float(first_nomanine[1]) > float(second_nomanine[1]):
+        print(first_nomanine[0])
+    elif float(first_nomanine[1]) < float(second_nomanine[1]):
+        print(second_nomanine[0])
+    else:
+        if Grade.index(first_nomanine[3]) > Grade.index(second_nomanine[3]):
+            print(first_nomanine[0])
+        elif Grade.index(first_nomanine[3]) < Grade.index(second_nomanine[3]):
+            print(second_nomanine[0])
+        else:
+            if Grade.index(first_nomanine[4]) > Grade.index(second_nomanine[4]):
+                print(first_nomanine[0])
+            elif Grade.index(first_nomanine[4]) < Grade.index(second_nomanine[4]):
+                print(second_nomanine[0])
+            else:
+                print("Both")
+elif first_nomanine[2] == "A" and second_nomanine[2] != "A":
+    print(first_nomanine[0])
+
+elif first_nomanine[2] != "A" and second_nomanine[2] == "A":
+    print(second_nomanine[0])
+
 else:
-    if m == 2:
-        n = 28
-        if y % 400 == 0:
-            n = 29
-        if (y % 4 == 0) and (y % 100 != 0):
-            n = 29
-d += 15
-if d > n:
-    d -= n
-    m += 1
-if m > 12:
-    m -= 12
-    y += 1
-y += 543
-print(f'{d}/{m}/{y}')
+    print("None")

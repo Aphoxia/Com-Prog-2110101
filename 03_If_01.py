@@ -1,26 +1,6 @@
-a = input()
-b = input()
-c = input()
-d = input()
-e = input()
-
-if a > b:
-    a,b = b,a
-if c > d:
-    c,d = d,c
-if a > c:
-    b,d = d,b
-    c = a
-a = e
-if a > b:
-    a,b = b,a
-if c > a:
-    b,d = d,b
-    a = c
-
-print(min(a,d))
-
-# 1,2,3,4,5
-# 40,30,20,50,10
-# 10,10,10,10,20
-# 0,-1,-2,2,1
+number_array = input()
+List = ["01","02","20","21","22","58"]
+if number_array in List:
+    print("OK")
+else:
+    print("Error")
