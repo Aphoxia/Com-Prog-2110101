@@ -1,1 +1,3 @@
-print(len(90))
+
+x = input().split()
+print(x)
